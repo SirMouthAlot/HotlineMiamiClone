@@ -29,16 +29,9 @@ public:
 	static unsigned int SpriteBit();
 	static unsigned int TransformBit();
 	static unsigned int AnimationBit();
-	static unsigned int LinkBit();
 	static unsigned int PhysicsBit();
-	static unsigned int HealthBarBit();
 	static unsigned int HoriScrollCameraBit();
 	static unsigned int VertScrollCameraBit();
-	static unsigned int PigBit();
-	static unsigned int BirdBit();
-	static unsigned int WoodBit();
-	static unsigned int GlassBit();
-
 	//Setters
 	//Sets main player entity
 	static void MainPlayer(unsigned int entity);
@@ -79,15 +72,9 @@ private:
 	static unsigned int m_spriteBit;
 	static unsigned int m_transformBit;
 	static unsigned int m_animationBit;
-	static unsigned int m_linkBit;
 	static unsigned int m_physicsBit;
-	static unsigned int m_healthBarBit;
 	static unsigned int m_horiScrollCameraBit;
 	static unsigned int m_vertScrollCameraBit;
-	static unsigned int m_pigBit;
-	static unsigned int m_birdBit;
-	static unsigned int m_woodBit;
-	static unsigned int m_glassBit;
 };
 
 #ifndef __ENTITYIDENTIFIERJSON_H__

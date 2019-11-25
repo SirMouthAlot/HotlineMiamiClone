@@ -48,9 +48,6 @@
     <ClInclude Include="BackEnd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BloomEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -75,22 +72,13 @@
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Glass.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GrainEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GreyscaleEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HealthBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HorizontalScroll.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HotlineMiamiScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Input.h">
@@ -106,9 +94,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PhysicsSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PixelateEffect.h">
@@ -174,10 +159,10 @@
     <ClInclude Include="Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Wood.h">
+    <ClInclude Include="Xinput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Xinput.h">
+    <ClInclude Include="HotlineMiamiBaseScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -206,9 +191,6 @@
     <ClCompile Include="BackEnd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bird.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BloomEffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -233,22 +215,13 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Glass.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GrainEffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GreyscaleEffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HealthBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HorizontalScroll.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HotlineMiamiScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Input.cpp">
@@ -267,9 +240,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PhysicsSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Pig.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PixelateEffect.cpp">
@@ -335,10 +305,10 @@
     <ClCompile Include="Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Wood.cpp">
+    <ClCompile Include="XInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="XInput.cpp">
+    <ClCompile Include="HotlineMiamiBaseScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

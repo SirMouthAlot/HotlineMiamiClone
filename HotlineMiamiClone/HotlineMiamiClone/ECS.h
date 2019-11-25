@@ -3,19 +3,15 @@
 
 #include <entt/entity/registry.hpp>
 
+#include "EntityIdentifier.h"
+#include "Transform.h"
 #include "Camera.h"
-#include "VerticalScroll.h"
-#include "HorizontalScroll.h"
 #include "Sprite.h"
 #include "AnimationController.h"
-#include "Transform.h"
-#include "EntityIdentifier.h"
-#include "HealthBar.h"
 #include "PhysicsBody.h"
-#include "Wood.h"
-#include "Pig.h"
-#include "Bird.h"
-#include "Glass.h"
+#include "VerticalScroll.h"
+#include "HorizontalScroll.h"
+
 
 class ECS abstract
 {

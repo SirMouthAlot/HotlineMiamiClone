@@ -1,4 +1,4 @@
-#include "HotlineMiamiScene.h"
+#include "HotlineMiamiBaseScene.h"
 #include "Utilities.h"
 #include "Timer.h"
 #include "EffectManager.h"

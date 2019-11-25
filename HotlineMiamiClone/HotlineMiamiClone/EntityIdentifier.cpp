@@ -7,15 +7,9 @@ unsigned int EntityIdentifier::m_cameraBit			= 0x1;
 unsigned int EntityIdentifier::m_spriteBit			= 0x10;
 unsigned int EntityIdentifier::m_transformBit		= 0x100;
 unsigned int EntityIdentifier::m_animationBit		= 0x1000;
-unsigned int EntityIdentifier::m_linkBit			= 0x10000;
-unsigned int EntityIdentifier::m_physicsBit			= 0x100000;
-unsigned int EntityIdentifier::m_healthBarBit		= 0x1000000;
-unsigned int EntityIdentifier::m_horiScrollCameraBit= 0x10000000;
-unsigned int EntityIdentifier::m_vertScrollCameraBit= 0x2;
-unsigned int EntityIdentifier::m_pigBit				= 0x20;
-unsigned int EntityIdentifier::m_birdBit			= 0x200;
-unsigned int EntityIdentifier::m_woodBit			= 0x2000;
-unsigned int EntityIdentifier::m_glassBit			= 0x20000;
+unsigned int EntityIdentifier::m_physicsBit			= 0x10000;
+unsigned int EntityIdentifier::m_horiScrollCameraBit= 0x100000;
+unsigned int EntityIdentifier::m_vertScrollCameraBit= 0x1000000;
 
 //(having just camera means the bit = 1)
 //(having sprite, animation and transform)
@@ -102,22 +96,10 @@ unsigned int EntityIdentifier::AnimationBit()
 	return m_animationBit;
 }
 
-unsigned int EntityIdentifier::LinkBit()
-{
-	//Gets the bit for Link
-	return m_linkBit;
-}
-
 unsigned int EntityIdentifier::PhysicsBit()
 {
 	//Gets the bit for the Physics Body
 	return m_physicsBit;
-}
-
-unsigned int EntityIdentifier::HealthBarBit()
-{
-	//Gets the bit for the Health Bar
-	return m_healthBarBit;
 }
 
 unsigned int EntityIdentifier::HoriScrollCameraBit()
@@ -128,26 +110,6 @@ unsigned int EntityIdentifier::HoriScrollCameraBit()
 unsigned int EntityIdentifier::VertScrollCameraBit()
 {
 	return m_vertScrollCameraBit;
-}
-
-unsigned int EntityIdentifier::PigBit()
-{
-	return m_pigBit;
-}
-
-unsigned int EntityIdentifier::BirdBit()
-{
-	return m_birdBit;
-}
-
-unsigned int EntityIdentifier::WoodBit()
-{
-	return m_woodBit;
-}
-
-unsigned int EntityIdentifier::GlassBit()
-{
-	return m_glassBit;
 }
 
 void EntityIdentifier::MainPlayer(unsigned int entity)

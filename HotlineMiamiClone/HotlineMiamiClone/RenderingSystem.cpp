@@ -13,80 +13,75 @@ void RenderingSystem::Update(entt::registry* reg)
 	//Clear the buffers
 	EffectManager::ClearBuffers();
 
-	//Creates a view of all entities consisting of both
-	//*Sprite AND Transform
-	auto view = reg->view<Sprite, Transform>();
-
-	//Loops through all the entities within view
-	for (auto entity : view)
 	{
-		//Grabs a reference to the Sprite component (in x entity)
-		Sprite &spr = view.get<Sprite>(entity);
-		//Updates the height and width of the unit plane, to match the width and height of the Sprite
-		view.get<Transform>(entity).SetScale(vec3(float(spr.GetWidth()), float(spr.GetHeight()), 1.f));
-		//Updates the transform of x entity
-		view.get<Transform>(entity).Update();
+		//Creates a view of all entities consisting of both
+		//*Sprite AND Transform
+		auto view = reg->view<Sprite, Transform>();
+
+		//Loops through all the entities within view
+		for (auto entity : view)
+		{
+			//Grabs a reference to the Sprite component (in x entity)
+			Sprite& spr = view.get<Sprite>(entity);
+			//Updates the height and width of the unit plane, to match the width and height of the Sprite
+			view.get<Transform>(entity).SetScale(vec3(float(spr.GetWidth()), float(spr.GetHeight()), 1.f));
+			//Updates the transform of x entity
+			view.get<Transform>(entity).Update();
+		}
 	}
 
-	//Creates a view consisting of all entityies containing horizontal scroll
-	auto view2_1 = reg->view<HorizontalScroll>();
-
-	//Loops through all the entities within view2_1
-	for (auto entity : view2_1)
 	{
-		//Grabs a reference to the scroll component
-		auto& scroll = view2_1.get(entity);
+		//Creates a view consisting of all entityies containing horizontal scroll
+		auto view = reg->view<HorizontalScroll>();
 
-		//Updates the scroll
-		scroll.Update();
+		//Loops through all the entities within view2_1
+		for (auto entity : view)
+		{
+			//Grabs a reference to the scroll component
+			auto& scroll = view.get(entity);
+
+			//Updates the scroll
+			scroll.Update();
+		}
 	}
 
-	//Creates a view of all entities consisting of Camera
-	auto view2_3 = reg->view<VerticalScroll>();
-
-	//Loops through all the entities within view2
-	for (auto entity : view2_3)
 	{
-		//Grabs a reference to the Camera component (in x entity)
-		auto &scroll = view2_3.get(entity);
+		//Creates a view of all entities consisting of vertical scroill
+		auto view = reg->view<VerticalScroll>();
 
-		//Updates the camera
-		scroll.Update();
+		//Loops through all the entities within view2
+		for (auto entity : view)
+		{
+			//Grabs a reference to the Camera component (in x entity)
+			auto& scroll = view.get(entity);
+
+			//Updates the camera
+			scroll.Update();
+		}
 	}
 
-	//Creates a view of all entities consisting of Camera
-	auto view2 = reg->view<Camera>();
-	
-	//Loops through all the entities within view2
-	for (auto entity : view2)
 	{
-		//Grabs a reference to the Camera component (in x entity)
-		auto &cam = view2.get(entity);
+		//Creates a view of all entities consisting of Camera
+		auto view = reg->view<Camera>();
 
-		//Updates the camera
-		cam.Update();
+		//Loops through all the entities within view2
+		for (auto entity : view)
+		{
+			//Grabs a reference to the Camera component (in x entity)
+			auto& cam = view.get(entity);
 
-		//Binds the shader
-		drawShader.Bind();
-		//Sends the view matrix to the shader
-		drawShader.SendUniform("uView", cam.GetView());
-		//Sends the projection matrix to the shader
-		drawShader.SendUniform("uProj", cam.GetProjection());
-		//Unbinds the shader
-		drawShader.Unbind();
-	}
+			//Updates the camera
+			cam.Update();
 
-
-	auto view3 = reg->view<HealthBar>();
-
-	//Loops through all entities within view3
-	for (auto entity : view3)
-	{
-		auto &bar = view3.get(entity);
-
-		//Displays current health with the entity number
-		//std::cout << "Entity Number " << std::to_string(entity) << " : ";
-		//bar.DisplayHealth();
+			//Binds the shader
+			drawShader.Bind();
+			//Sends the view matrix to the shader
+			drawShader.SendUniform("uView", cam.GetView());
+			//Sends the projection matrix to the shader
+			drawShader.SendUniform("uProj", cam.GetProjection());
+			//Unbinds the shader
+			drawShader.Unbind();
+		}
 	}
 }
 

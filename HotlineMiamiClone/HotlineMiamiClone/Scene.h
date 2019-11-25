@@ -128,14 +128,6 @@ inline void to_json(nlohmann::json& j, const Scene& scene)
 		//you need to #1 add a static (unique) bit for that class
 		//And then add more if statements after this point
 
-		//If Identity includes Health Bar bit
-			//This means that the entity contains a Health Bar
-		if (identity & EntityIdentifier::HealthBarBit())
-		{
-			//Stores the Health bar
-			j[std::to_string(counter)]["HealthBar"] = scene.GetScene()->get<HealthBar>(entity);
-		}
-
 		if (identity & EntityIdentifier::HoriScrollCameraBit())
 		{
 			//Stores the horizontal scrolling camera
@@ -266,16 +258,6 @@ inline void from_json(const nlohmann::json& j, Scene& scene)
 			reg.assign<PhysicsBody>(entity);
 			//Sets the physics body to the saved version
 			reg.get<PhysicsBody>(entity) = j["Scene"][std::to_string(i)]["PhysicsBody"];
-		}
-
-		//If Identity includes the Health Bar Bit
-			//This means that the entity contains a health bar
-		if (identity & EntityIdentifier::HealthBarBit())
-		{
-			//Adds Health bar to the entity
-			reg.assign<HealthBar>(entity);
-			//Sets the health bar to our saved version
-			reg.get<HealthBar>(entity) = j["Scene"][std::to_string(i)]["HealthBar"];
 		}
 
 		//If Identity includes the vertical scrolling camera bit

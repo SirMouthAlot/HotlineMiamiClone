@@ -2,7 +2,7 @@
 #define __GAME_H__
 
 #include "BackEnd.h"
-#include "HotlineMiamiScene.h"
+#include "HotlineMiamiBaseScene.h"
 
 //Our main class for running our game
 class Game
